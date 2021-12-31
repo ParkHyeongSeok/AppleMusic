@@ -50,8 +50,8 @@ class PlayerViewController: UIViewController {
         updateTrackInfo()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         // TODO: 뷰나갈때 처리 > 심플플레이어
         simplePlayer.pause()
         simplePlayer.replaceCurrentItem(with: nil)
