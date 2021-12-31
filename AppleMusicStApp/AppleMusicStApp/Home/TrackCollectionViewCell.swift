@@ -9,6 +9,8 @@
 import UIKit
 
 class TrackCollecionViewCell: UICollectionViewCell {
+    static let identifier = "TrackCollecionViewCell"
+    
     @IBOutlet weak var trackThumbnail: UIImageView!
     @IBOutlet weak var trackTitle: UILabel!
     @IBOutlet weak var trackArtist: UILabel!
@@ -20,7 +22,8 @@ class TrackCollecionViewCell: UICollectionViewCell {
     }
     
     func updateUI(item: Track?) {
-        // TODO: 곡정보 표시하기
-        
+        self.trackThumbnail.image = item?.artwork
+        self.trackTitle.text = item?.title
+        self.trackArtist.text = item?.artist
     }
 }

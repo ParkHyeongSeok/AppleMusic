@@ -11,6 +11,7 @@ import UIKit
 
 extension AVPlayerItem {
     func convertToTrack() -> Track? {
+        // asset안에는 해당 파일의 메타데이터(썸네일, 타이틀, 아티스트 등)이 있다.
         let metadatList = asset.metadata
         
         var trackTitle: String?
@@ -78,7 +79,9 @@ extension AVMetadataItem {
 
 extension AVPlayer {
     var isPlaying: Bool {
+        // 현재 재생 중인 아이템이 있는지에 따라 재생 여부 판단
         guard self.currentItem != nil else { return false }
+        // 재생 비율로 재생여부를 판단
         return self.rate != 0
     }
 }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03A56FDA277EE42300199CB7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A56FD9277EE42300199CB7 /* Album.swift */; };
 		707E85C59340811662152D78 /* Pods_AppleMusicStApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C214C50CF2ED257B6A3013 /* Pods_AppleMusicStApp.framework */; };
 		943818C2241E31200093FC36 /* TrackCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943818C1241E31200093FC36 /* TrackCollectionHeaderView.swift */; };
 		943818C7241E41940093FC36 /* DefaultStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943818C6241E41940093FC36 /* DefaultStyle.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03A56FD9277EE42300199CB7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		78EA3C1DC811D8C45C371137 /* Pods-AppleMusicStApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleMusicStApp.release.xcconfig"; path = "Target Support Files/Pods-AppleMusicStApp/Pods-AppleMusicStApp.release.xcconfig"; sourceTree = "<group>"; };
 		814E174D95E13815B8C3A589 /* Pods-AppleMusicStApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleMusicStApp.debug.xcconfig"; path = "Target Support Files/Pods-AppleMusicStApp/Pods-AppleMusicStApp.debug.xcconfig"; sourceTree = "<group>"; };
 		943818C1241E31200093FC36 /* TrackCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -104,13 +106,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03A56FD8277EE41000199CB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				948C957E23CA2D52001642F9 /* Track.swift */,
+				03A56FD9277EE42300199CB7 /* Album.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03A56FDB277EEED400199CB7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				948C958023CA2D9F001642F9 /* Extension+AVPlayerItem.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5900892327D447B9E1AA4F5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				814E174D95E13815B8C3A589 /* Pods-AppleMusicStApp.debug.xcconfig */,
 				78EA3C1DC811D8C45C371137 /* Pods-AppleMusicStApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,14 +161,12 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
-		943818C5241E32400093FC36 /* Track */ = {
+		943818C5241E32400093FC36 /* TrackManager */ = {
 			isa = PBXGroup;
 			children = (
-				948C958023CA2D9F001642F9 /* Extension+AVPlayerItem.swift */,
-				948C957E23CA2D52001642F9 /* Track.swift */,
 				948C957C23CA2D16001642F9 /* TrackManager.swift */,
 			);
-			path = Track;
+			path = TrackManager;
 			sourceTree = "<group>";
 		};
 		943818C8241E41C80093FC36 /* Style */ = {
@@ -182,12 +198,14 @@
 		948C951723C9AAF5001642F9 /* AppleMusicStApp */ = {
 			isa = PBXGroup;
 			children = (
-				943818C3241E31EE0093FC36 /* Home */,
-				943818C4241E32160093FC36 /* Player */,
-				943818C5241E32400093FC36 /* Track */,
-				943818C8241E41C80093FC36 /* Style */,
 				948C951823C9AAF5001642F9 /* AppDelegate.swift */,
 				948C951A23C9AAF5001642F9 /* SceneDelegate.swift */,
+				03A56FDB277EEED400199CB7 /* Extension */,
+				943818C5241E32400093FC36 /* TrackManager */,
+				03A56FD8277EE41000199CB7 /* Model */,
+				943818C3241E31EE0093FC36 /* Home */,
+				943818C4241E32160093FC36 /* Player */,
+				943818C8241E41C80093FC36 /* Style */,
 				948C952123C9AAF6001642F9 /* Assets.xcassets */,
 				948C952323C9AAF6001642F9 /* LaunchScreen.storyboard */,
 				948C952623C9AAF6001642F9 /* Info.plist */,
@@ -374,6 +392,7 @@
 				948C957B23CA2CED001642F9 /* TrackCollectionViewCell.swift in Sources */,
 				948C954823C9F10B001642F9 /* HomeViewController.swift in Sources */,
 				948C957F23CA2D52001642F9 /* Track.swift in Sources */,
+				03A56FDA277EE42300199CB7 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
