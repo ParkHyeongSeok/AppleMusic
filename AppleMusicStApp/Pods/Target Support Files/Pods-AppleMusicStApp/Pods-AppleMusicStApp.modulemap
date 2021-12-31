@@ -1,0 +1,6 @@
+framework module Pods_AppleMusicStApp {
+  umbrella header "Pods-AppleMusicStApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
