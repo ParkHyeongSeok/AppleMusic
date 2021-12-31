@@ -52,9 +52,10 @@ extension HomeViewController: UICollectionViewDataSource {
             }
             
             header.update(with: target)
-            header.tapHandler = { item in
+            header.tapHandler = { target in
                 let sb = UIStoryboard(name: "Player", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "PlayerViewController") as! PlayerViewController
+                vc.simplePlayer.replaceCurrentItem(with: target)
                 self.present(vc, animated: true)
             }
             
@@ -67,10 +68,11 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let target = trackManager.tracks[indexPath.item]
+        let target = trackManager.tracks[indexPath.item]
         
         let sb = UIStoryboard(name: "Player", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "PlayerViewController") as! PlayerViewController
+        vc.simplePlayer.replaceCurrentItem(with: target)
         self.present(vc, animated: true)
     }
 }

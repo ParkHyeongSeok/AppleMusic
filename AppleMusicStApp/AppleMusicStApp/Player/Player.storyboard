@@ -31,17 +31,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지코" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vb-tt-7L7">
-                                <rect key="frame" x="192.5" y="518" width="29.5" height="20.5"/>
+                                <rect key="frame" x="192.5" y="508" width="29.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H2I-Dz-0D4">
-                                <rect key="frame" x="38" y="627" width="338" height="31"/>
+                                <rect key="frame" x="38" y="637" width="338" height="31"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="beginDrag:" destination="mND-BP-7fP" eventType="editingDidBegin" id="R9k-dn-OxR"/>
+                                    <action selector="endDrag:" destination="mND-BP-7fP" eventType="editingDidEnd" id="bph-kz-GwS"/>
+                                    <action selector="seek:" destination="mND-BP-7fP" eventType="valueChanged" id="jRm-bK-KJg"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFg-gl-1EK">
-                                <rect key="frame" x="328" y="667" width="46" height="20.5"/>
+                                <rect key="frame" x="328" y="677" width="46" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,9 +63,12 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                 </state>
                                 <state key="selected" image="pause.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="togglePlayButton:" destination="mND-BP-7fP" eventType="touchUpInside" id="fke-GW-S4h"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGZ-HF-3Xm">
-                                <rect key="frame" x="40" y="667" width="46" height="21"/>
+                                <rect key="frame" x="40" y="677" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,9 +77,9 @@
                         <viewLayoutGuide key="safeArea" id="99H-cF-MlY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uhr-00-aIp" firstAttribute="top" secondItem="H2I-Dz-0D4" secondAttribute="bottom" constant="50" id="1VE-1z-ANL"/>
+                            <constraint firstItem="uhr-00-aIp" firstAttribute="top" secondItem="H2I-Dz-0D4" secondAttribute="bottom" constant="40" id="1VE-1z-ANL"/>
                             <constraint firstItem="28f-G2-6Mm" firstAttribute="centerX" secondItem="AwX-xm-6nE" secondAttribute="centerX" id="AzC-42-sHC"/>
-                            <constraint firstItem="1Vb-tt-7L7" firstAttribute="top" secondItem="L2I-fu-t7O" secondAttribute="bottom" constant="25" id="BEZ-pW-5lc"/>
+                            <constraint firstItem="1Vb-tt-7L7" firstAttribute="top" secondItem="L2I-fu-t7O" secondAttribute="bottom" constant="15" id="BEZ-pW-5lc"/>
                             <constraint firstItem="aFg-gl-1EK" firstAttribute="top" secondItem="H2I-Dz-0D4" secondAttribute="bottom" constant="10" id="GWl-iM-QG1"/>
                             <constraint firstItem="1Vb-tt-7L7" firstAttribute="centerX" secondItem="AwX-xm-6nE" secondAttribute="centerX" id="MSt-RQ-lRt"/>
                             <constraint firstItem="L2I-fu-t7O" firstAttribute="top" secondItem="28f-G2-6Mm" secondAttribute="bottom" constant="25" id="Mmj-9p-nn8"/>
